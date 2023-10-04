@@ -9,7 +9,28 @@
 
 <body>
     <h1>Students List</h1>
-    <table></table>
+    <table border="1" width="100%">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile No.</th>
+        </tr>
+        <% if(student.length>0){ %>
+            <% for(let i=0; i<student.length; i++){ %>
+                <tr>
+                    <td><%- student[i].ID %></td>
+                    <td><%- student[i].NAME %></td>
+                    <td><%- student[i].EMAIL %></td>
+                    <td><%- student[i].MOBILE %></td>
+                    <td>
+                </tr>
+                <% } %>
+                    <% }else{ %>
+                        <h1>Students Data Not Found!</h1>
+                        <% } %>
+
+    </table>
 </body>
 
 </html>
