@@ -9,7 +9,7 @@ studentRouter.post('/submit', insertValues);
 
 studentRouter.get('/student', getStudent);
 studentRouter.get('/delete-student', deleteStudents);
-
+studentRouter.get('/update-student', );
 
 
 module.exports = studentRouter;
