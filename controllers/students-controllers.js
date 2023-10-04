@@ -68,3 +68,12 @@ module.exports.updateStudentsDetails = (req, res) => {
 
     })
 }
+
+module.exports.searchStudents = (req, res) => {
+    let sql = "SELECT * FROM STUDENTS";
+    connection.query(sql, (err, result) => {
+        if (err) return console.log(err);
+        res.render("search-student", { student: result });
+
+    });
+};
