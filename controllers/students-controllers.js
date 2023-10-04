@@ -54,3 +54,7 @@ module.exports.updateStudents = (req, res) => {
 
     })
 }
+
+module.exports.updateStudentsDetails = (req, res)=>{
+    
+}
