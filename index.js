@@ -1,13 +1,17 @@
+const connection = require('./model/connection.js')
 const mysql = require('mysql');
 const express = require('express');
+
 const studentRouter = require('./routes/students-routes');
-const connection = require('./model/connection.js');
 
 const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', studentRouter);
+
+
 
 connection.connect(err => {
     if (err) console.log("There is an error while connecting" + err);
