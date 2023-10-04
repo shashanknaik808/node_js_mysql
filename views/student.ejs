@@ -25,8 +25,9 @@
                     <td><%- student[i].EMAIL %></td>
                     <td><%- student[i].MOBILE %></td>
                     <td>
-                    <a href="/delete-student?id=<%- student[i].ID %>">Delete</a>
-                </td>
+                        <a href="/delete-student?id=<%- student[i].ID %>">Delete</a>
+                        <a href="/update-student?id=<%- student[i].ID %>">Update</a>
+                    </td>
 
                 </tr>
                 <% } %>
