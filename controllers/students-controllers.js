@@ -43,3 +43,14 @@ module.exports.deleteStudents = (req, res) => {
 
     });
 }
+
+module.exports.updateStudents = (req, res) => {
+    let sql = "SELECT * FROM STUDENTS WHERE ID=?";
+    let id = req.query.id;
+    connection.query(sql, [id], (err, result) => {
+
+        if (err) return console.log(err);
+        res.render("update-student", { student: result });
+
+    })
+}
