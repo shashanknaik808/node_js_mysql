@@ -21,13 +21,14 @@ module.exports.insertValues = (req, res) => {
     });
 }
 
+
 module.exports.getStudent = (req, res) => {
 
     let sql = "SELECT * FROM STUDENTS";
     connection.query(sql, (err, result) => {
         if (err) return console.log(err);
-        res.render(__dirname + "/student", { students: result });
+        res.render("student", { student: result });
 
-    })
+    });
 
 }
