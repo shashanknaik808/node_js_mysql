@@ -17,7 +17,7 @@ module.exports.insertValues = (req, res) => {
     connection.query(sql_query, (err, result) => {
         if (err) return console.log("Error while inserted data " + err);
         res.redirect('/student')
-        res.json({ 'message ': "insert was successfull", "result": result.insertId });
+        // res.json({ 'message ': "insert was successfull", "result": result.insertId });
     });
 }
 
