@@ -6,7 +6,8 @@ const { homePage,
     deleteStudents,
     updateStudents, 
     updateStudentsDetails,
-    searchStudents
+    searchStudents,
+    searchStudentsDetails
 } 
 = require('../controllers/students-controllers.js');
 
@@ -20,6 +21,7 @@ studentRouter.get('/delete-student', deleteStudents);
 studentRouter.get('/update-student', updateStudents);
 studentRouter.post('/update-student', updateStudentsDetails);
 studentRouter.get('/search-student', searchStudents);
+studentRouter.get('/search', searchStudentsDetails);
 
 
 module.exports = studentRouter;

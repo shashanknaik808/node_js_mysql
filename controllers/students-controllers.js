@@ -76,4 +76,17 @@ module.exports.searchStudents = (req, res) => {
         res.render("search-student", { student: result });
 
     });
-};
+}
+
+module.exports.searchStudentsDetails = (req, res) => {
+
+    let name = req.query.name;
+    let email = req.query.email;
+    let mobile = req.query.mobile;
+    
+    let sql = "SELECT * FROM STUDENTS WHERE NAME LIKE '%" + name + "%'AND EMAIL LIKE '%" + email + "%' AND MOBILE LIKE '%" + mobile + "%'";
+    connection.query(sql, (err, result) => {
+        if (err) console.log(err);
+        res.render("search-student", { student: result });
+    });
+}
