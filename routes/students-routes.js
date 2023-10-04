@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { homePage, insertValues, getStudent } = require('../controllers/students-controllers.js');
+const { homePage, insertValues, getStudent, deleteStudents } = require('../controllers/students-controllers.js');
 
 const studentRouter = express.Router();
 
