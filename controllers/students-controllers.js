@@ -5,4 +5,3 @@ const connection = require('../model/connection.js');
 module.exports.homePage = (req, res) => {
     res.sendFile(__dirname + '/register.html');
 };
-
