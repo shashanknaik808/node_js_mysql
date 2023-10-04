@@ -15,6 +15,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Mobile No.</th>
+            <th>Actions</th>
         </tr>
         <% if(student.length>0){ %>
             <% for(let i=0; i<student.length; i++){ %>
@@ -24,6 +25,9 @@
                     <td><%- student[i].EMAIL %></td>
                     <td><%- student[i].MOBILE %></td>
                     <td>
+                    <a href="/delete-student?id=<%- student[i].ID %>">Delete</a>
+                </td>
+
                 </tr>
                 <% } %>
                     <% }else{ %>
